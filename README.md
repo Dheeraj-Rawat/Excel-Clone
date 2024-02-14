@@ -33,4 +33,5 @@ To run this project locally, follow these steps:
 - styles.css: CSS file containing styles for the application.
 - script.js: JavaScript file containing logic for the application.
 ## Contributing
-- Contributions are welcome! If you'd like to contribute to this project.
+- Contributions are welcome!
+- If you'd like to contribute to this project please feel free to add more functions like adding functonalities of formula bar.

@@ -1,0 +1,380 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14;
+}
+.container{
+    max-height: 100vh;
+    border: 2px solid rgb(228, 21, 21);
+    max-width: 100vw;
+    position: relative;
+}
+.title-bar{
+    height: 5vh;
+    background-color: #107c41;
+    display: flex;
+    flex-direction: row;
+    /* to adjust content horizontally and vertically in center */
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+.menu-bar{
+    height: 5vh;
+    background-color: #107c41;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    
+
+
+   
+}
+.menu-items{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 17px;
+    /* to align items vertically center */
+    display: flex;
+    align-items: center;
+}
+.selected{
+    background-color: rgb(225, 221, 221);
+    color:#107c41 ;
+}
+.menu-items:hover{
+    cursor: pointer;
+    background-color: #0e6837;
+}
+.menu-items.selected:hover{
+    background-color: rgb(225, 221, 221);
+    cursor: default;
+}
+   
+/* ------------------------menu icon bar ---------------------------------------------- */
+.menu-icon-bar{
+    height: 6vh;
+   
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    align-items: center;
+            
+
+}
+
+.menu_icon{
+    padding-left: 10px;
+    padding-right: 10px;
+      
+    
+}
+
+.menu_icon:hover{
+    background-color: rgb(126, 124, 124);
+    cursor: pointer;
+   
+
+}
+
+.selector{
+    font-size: 18px;
+    height: 30px;
+    width: 150px;
+
+
+    
+}
+.selector option{
+    font-size: 18px;
+}
+.selector-value{
+    height: 30px;
+
+}
+.menu_icon.selected-left-align{
+    background-color: lightgray;
+}
+.icon-color-fill, .icon-color-text{
+    position: relative;
+}
+.color-picker{
+    position: absolute;
+    width: 26px;
+    height: 12px;
+    border: none;
+    padding: 0;
+    top: 18px;
+    left: 8px;
+    cursor: pointer;
+
+
+}
+.font-family-selector{
+    width: 150px;
+    font-family: 'Noto Sans';
+}
+
+
+
+/* -------------------- formula bar ----------------------------------- */
+
+.formula-bar{
+    height: 6vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    background-color:rgb(241, 241, 241) ;
+   
+    
+}
+.formula-editor{
+    height: 70%;
+    border: 1px solid lightgray;
+    background-color: white;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    display: flex;
+    align-items: center;
+}
+.selected-cell{
+    width: 120px;
+
+}
+.function{
+    width: 40px;
+    
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.formula-input{
+    width:calc(100vw - 160px) ;
+    outline-color: #107c41
+   
+}
+/*------------------ cell container---------------------------*/
+.cell-container{
+    height: 74vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    
+    
+   
+}
+.select-all{
+    height: 30px;
+    width: 30px;
+    border: 1px solid  lightgray;
+}
+.column{
+    height: 30px;
+    width: calc(100vw - 30px);
+    border: 1px solid lightgray;
+    /* this is parent div of column name so to align items in center display flex here is imp */
+    display: flex;
+    overflow: hidden;
+    
+    
+}
+.row{
+    width: 30px;
+    height: calc(74vh - 30px);
+    border: 1px solid  lightgray;
+    overflow: hidden;
+    
+    
+    
+}
+.input-cell-container{
+    width: calc(100vw - 30px);
+    height: calc(74vh - 15px);
+    border: 1px solid lightgray;
+   overflow: scroll;
+    
+    
+      
+    
+}
+
+
+
+.column-name{
+    min-width: 100px;
+    /* to align items in center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid lightgray;
+    font-weight: bold;
+
+}
+.row-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 25px;
+    border-bottom: 1px solid lightgray;
+
+}
+.cell-row{
+    display: flex;
+
+}
+.input-cell{
+    min-width: 100px;
+    min-height: 25px;
+    border-right: 1px solid lightgray;
+    border-bottom:1px solid lightgray ;
+    outline-color: #107c41;
+    font-size: 14px;
+    font-family: 'Noto Sans';
+}
+.input-cell.selected{
+    border: 2px solid #107c41;
+    background-color: white;
+}
+
+/*-------------------------sheet bar -------------------------*/
+.sheet-bar{
+    height: 4vh;
+    display: flex;
+    align-items: center;
+      
+
+}
+.scroller{
+    width: 70px;
+}
+.icon-left-scroll, .icon-right-scroll{
+    font-size: 30px;
+}
+.icon-left-scroll:hover, .icon-right-scroll:hover{
+    background-color: lightgrey;
+    cursor: pointer;
+}
+.icon-add{
+    color:#107c41 ;
+    cursor: pointer;
+   width: 40px;
+}
+.icon-add:hover{
+    transform: scale(1.2);
+}
+
+.sheet-tab{
+    
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    width: 70px;
+    justify-content: center;
+    font-weight: 600;
+    /* background-color: lightgrey; */
+    
+
+
+}
+.sheet-tab:hover{
+   cursor: pointer;
+   background-color: lightgray;
+}
+.sheet-tab-container{
+    border: 2px solid lightgray;
+    width: calc(100vw-110px);
+    display: flex;
+
+
+}
+
+.sheet-tab.selected{
+    border-bottom: 4px solid #107c41;
+}
+.sheet-tab.selected:hover{
+    cursor: default;
+    background-color: white;
+
+}
+
+.input-cell.top-cell-selected{
+    border-top: none;
+}
+.input-cell.bottom-cell-selected{
+    border-bottom: 1px solid lightgray;
+}
+.input-cell.right-cell-selected{
+   border-right: 1px solid lightgray;
+}
+.input-cell.left-cell-selected{
+    border-left: none;
+}
+.sheet-options-modal{
+    position: absolute;
+    bottom: 4vh;
+    background-color: white;
+    height: 70px;
+    width: 60px;
+    box-shadow: 0 0 5px 3px lightgray;
+
+}
+.sheet-rename,.sheet-delete{
+    height: 35px;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sheet-rename:hover,.sheet-delete:hover{
+    background-color: lightgray;
+    cursor: pointer;
+
+}
+.sheet-rename-modal{
+    position: absolute;
+    height: 180px;
+    background-color: white;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 5px 3px lightgray;
+    top: calc(100vh / 2 -90px);
+    left: calc(100vw / 2 -150px);
+
+}
+.action-buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.modal-title{
+    font-size: 20px;
+    margin-top: 5px;
+}
+.new-sheet-name{
+    height: 26px;
+    font-size: 18px;
+    margin-top: 26px;
+    outline-color: #107c41 ;
+
+}
+.submit-button{
+    cursor: pointer;
+    background-color: #107c41;
+    color: white;
+    padding: 8px;
+}
+.cancel-button{
+    cursor: pointer;
+    background-color: rgb(241, 241, 241);
+    color: black;
+    padding: 8px;
+}

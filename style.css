@@ -120,7 +120,7 @@
 
 /* -------------------- formula bar ----------------------------------- */
 
-.formula-bar{
+/* .formula-bar{
     height: 6vh;
     display: flex;
     flex-direction: row;
@@ -157,7 +157,7 @@
     width:calc(100vw - 160px) ;
     outline-color: #107c41
    
-}
+} */
 /*------------------ cell container---------------------------*/
 .cell-container{
     height: 74vh;
